@@ -174,12 +174,13 @@
   }
 
   function renderPickupList(rute) {
-    const upcoming = getUpcomingHentinger(rute);
+    // Den neste hentingen vises allerede i "next-pickup"-boksen over listen.
+    const upcoming = getUpcomingHentinger(rute).slice(1);
     els.pickupList.innerHTML = "";
 
     if (upcoming.length === 0) {
       const li = document.createElement("li");
-      li.textContent = "Ingen kommende hentinger i datasettet.";
+      li.textContent = "Ingen flere kommende hentinger i datasettet.";
       els.pickupList.appendChild(li);
       return;
     }
@@ -219,11 +220,25 @@
   }
 
   function formatDate(date) {
-    return date.toLocaleDateString("no-NO", {
+    const dateStr = date.toLocaleDateString("no-NO", {
       weekday: "long",
       day: "numeric",
       month: "long",
       year: "numeric",
     });
+    return `${dateStr} (uke ${getIsoWeekNumber(date)})`;
+  }
+
+  // ISO 8601-ukenummer, som er den norske standarden (uke 1 er uken med årets første torsdag).
+  function getIsoWeekNumber(date) {
+    const target = new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()));
+    const dayNum = (target.getUTCDay() + 6) % 7; // mandag = 0 ... søndag = 6
+    target.setUTCDate(target.getUTCDate() - dayNum + 3);
+
+    const firstThursday = new Date(Date.UTC(target.getUTCFullYear(), 0, 4));
+    const firstDayNum = (firstThursday.getUTCDay() + 6) % 7;
+    firstThursday.setUTCDate(firstThursday.getUTCDate() - firstDayNum + 3);
+
+    return 1 + Math.round((target - firstThursday) / (7 * 24 * 60 * 60 * 1000));
   }
 })();
