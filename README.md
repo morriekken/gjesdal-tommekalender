@@ -22,12 +22,15 @@ python3 -m http.server 8000
 
 ## Data
 
-`data/tommekalender.json` inneholder for øyeblikket **eksempeldatoer**, ikke
-offisielle hentedatoer. Rutene (Rute 1–3) og gatenavnene er hentet fra
-kommunens nettsider, men selve hentedatoene må oppdateres manuelt fra de
-offisielle PDF-kalenderne før appen kan brukes i praksis:
+`data/tommekalender.json` inneholder reelle hentedatoer for 2026 for Rute 1–4,
+hentet fra kommunens offisielle PDF-kalendere. Når 2027-kalenderne publiseres,
+oppdater `hentinger`-listene (og `meta.gjelderAar`) manuelt fra de nye PDF-ene:
 
 <https://www.gjesdal.kommune.no/tjenester/bolig-eiendom-kart-og-plan/renovasjon-avfall/tommekalender/>
+
+Datoer som følge av helligdager (påske, pinse, jul) er forskjøvet til nærmeste
+virkedag slik det står i kilde-PDF-ene. Noen uker har ingen henting for en gitt
+rute – det stemmer med kalenderen, ikke en feil i dataene.
 
 For varsling om tømmedag anbefaler kommunen appen **Gjesdaltråden** (SMS-varsling er avviklet).
 
