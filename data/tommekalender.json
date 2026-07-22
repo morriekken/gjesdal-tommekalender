@@ -3,61 +3,1491 @@
     "kommune": "Gjesdal kommune",
     "kilde": "https://www.gjesdal.kommune.no/tjenester/bolig-eiendom-kart-og-plan/renovasjon-avfall/tommekalender/",
     "sistOppdatert": "2026-07-22",
-    "merknad": "PLACEHOLDER-DATA. Hentedatoene under er eksempeldata og MÅ erstattes med reelle datoer fra kommunens tømmekalender-PDF-er (én PDF per rute, publisert på kilde-URLen over) før appen brukes i praksis."
+    "gjelderAar": 2026
   },
   "avfallstyper": [
-    { "id": "restavfall", "navn": "Restavfall", "farge": "#4b4b4b", "beholder": "Grå dunk" },
-    { "id": "matavfall", "navn": "Matavfall", "farge": "#7a5230", "beholder": "Brun dunk / grønn pose" },
-    { "id": "papir", "navn": "Papir", "farge": "#2f6fb3", "beholder": "Blå dunk" },
-    { "id": "plast", "navn": "Plastemballasje", "farge": "#2f9e5c", "beholder": "Merket sekk, hentes sammen med restavfall" },
-    { "id": "bleie", "navn": "Bleiedunk", "farge": "#a0509a", "beholder": "Ekstra dunk (må bestilles)" }
+    {
+      "id": "restavfall",
+      "navn": "Restavfall",
+      "farge": "#4b4b4b",
+      "beholder": "Grå dunk (og bleiedunk, tømmes samme dag)"
+    },
+    {
+      "id": "matavfall",
+      "navn": "Matavfall",
+      "farge": "#2f9e5c",
+      "beholder": "Dunk for matavfall"
+    },
+    {
+      "id": "glassmetall",
+      "navn": "Glass/metallemballasje",
+      "farge": "#3f8f8f",
+      "beholder": "Egen dunk/boks"
+    },
+    {
+      "id": "papir",
+      "navn": "Papir",
+      "farge": "#2f6fb3",
+      "beholder": "Blå dunk"
+    }
   ],
   "ruter": [
     {
       "id": "rute1",
       "navn": "Rute 1",
       "gater": [
-        "Solåsveien", "Fiskebekkveien", "Åfaret",
-        "Ålgårdsheia", "Nordhagen",
-        "Ålgårdsveien", "Rishagen", "Kongsgata"
+        "Solåsveien",
+        "Fiskebekkveien",
+        "Åfaret",
+        "Ålgårdsheia",
+        "Nordhagen",
+        "Ålgårdsveien",
+        "Rishagen",
+        "Kongsgata"
       ],
+      "juletreUke": 2,
       "hentinger": [
-        { "dato": "2026-08-05", "typer": ["restavfall", "plast"] },
-        { "dato": "2026-08-12", "typer": ["matavfall"] },
-        { "dato": "2026-08-19", "typer": ["restavfall", "plast"] },
-        { "dato": "2026-08-26", "typer": ["matavfall", "papir"] },
-        { "dato": "2026-09-02", "typer": ["restavfall", "plast"] }
+        {
+          "dato": "2026-01-05",
+          "typer": [
+            "matavfall"
+          ]
+        },
+        {
+          "dato": "2026-01-09",
+          "typer": [
+            "glassmetall"
+          ]
+        },
+        {
+          "dato": "2026-01-12",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-01-19",
+          "typer": [
+            "papir"
+          ]
+        },
+        {
+          "dato": "2026-01-26",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-02-02",
+          "typer": [
+            "matavfall"
+          ]
+        },
+        {
+          "dato": "2026-02-09",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-02-16",
+          "typer": [
+            "papir"
+          ]
+        },
+        {
+          "dato": "2026-02-23",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-02-27",
+          "typer": [
+            "matavfall"
+          ]
+        },
+        {
+          "dato": "2026-03-02",
+          "typer": [
+            "matavfall"
+          ]
+        },
+        {
+          "dato": "2026-03-06",
+          "typer": [
+            "glassmetall"
+          ]
+        },
+        {
+          "dato": "2026-03-09",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-03-16",
+          "typer": [
+            "papir"
+          ]
+        },
+        {
+          "dato": "2026-03-23",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-03-27",
+          "typer": [
+            "matavfall"
+          ]
+        },
+        {
+          "dato": "2026-04-07",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-04-13",
+          "typer": [
+            "papir"
+          ]
+        },
+        {
+          "dato": "2026-04-20",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-04-27",
+          "typer": [
+            "matavfall"
+          ]
+        },
+        {
+          "dato": "2026-05-04",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-05-08",
+          "typer": [
+            "glassmetall"
+          ]
+        },
+        {
+          "dato": "2026-05-11",
+          "typer": [
+            "papir"
+          ]
+        },
+        {
+          "dato": "2026-05-18",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-05-26",
+          "typer": [
+            "matavfall"
+          ]
+        },
+        {
+          "dato": "2026-06-01",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-06-08",
+          "typer": [
+            "papir"
+          ]
+        },
+        {
+          "dato": "2026-06-15",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-06-22",
+          "typer": [
+            "matavfall"
+          ]
+        },
+        {
+          "dato": "2026-06-29",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-07-06",
+          "typer": [
+            "papir"
+          ]
+        },
+        {
+          "dato": "2026-07-13",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-07-20",
+          "typer": [
+            "matavfall"
+          ]
+        },
+        {
+          "dato": "2026-07-27",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-07-31",
+          "typer": [
+            "glassmetall"
+          ]
+        },
+        {
+          "dato": "2026-08-03",
+          "typer": [
+            "papir"
+          ]
+        },
+        {
+          "dato": "2026-08-10",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-08-17",
+          "typer": [
+            "matavfall"
+          ]
+        },
+        {
+          "dato": "2026-08-24",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-08-31",
+          "typer": [
+            "papir"
+          ]
+        },
+        {
+          "dato": "2026-09-07",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-09-14",
+          "typer": [
+            "matavfall"
+          ]
+        },
+        {
+          "dato": "2026-09-21",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-09-28",
+          "typer": [
+            "papir"
+          ]
+        },
+        {
+          "dato": "2026-10-05",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-10-12",
+          "typer": [
+            "matavfall"
+          ]
+        },
+        {
+          "dato": "2026-10-19",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-10-26",
+          "typer": [
+            "papir"
+          ]
+        },
+        {
+          "dato": "2026-11-02",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-11-06",
+          "typer": [
+            "glassmetall"
+          ]
+        },
+        {
+          "dato": "2026-11-09",
+          "typer": [
+            "matavfall"
+          ]
+        },
+        {
+          "dato": "2026-11-16",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-11-23",
+          "typer": [
+            "papir"
+          ]
+        },
+        {
+          "dato": "2026-11-30",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-12-07",
+          "typer": [
+            "matavfall"
+          ]
+        },
+        {
+          "dato": "2026-12-14",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-12-18",
+          "typer": [
+            "papir"
+          ]
+        },
+        {
+          "dato": "2026-12-28",
+          "typer": [
+            "restavfall"
+          ]
+        }
       ]
     },
     {
       "id": "rute2",
       "navn": "Rute 2",
       "gater": [
-        "Opstad", "Djupedalsveien", "Holmaveien",
-        "Vestliveien", "Sandvikveien", "Torvmyrveien", "Ånundskaret", "Rundaberget",
+        "Opstad",
+        "Djupedalsveien",
+        "Holmaveien",
+        "Vestliveien",
+        "Sandvikveien",
+        "Torvmyrveien",
+        "Ånundskaret",
+        "Rundaberget",
         "Sikvalandsvegen"
       ],
+      "juletreUke": 2,
       "hentinger": [
-        { "dato": "2026-08-06", "typer": ["restavfall", "plast"] },
-        { "dato": "2026-08-13", "typer": ["matavfall"] },
-        { "dato": "2026-08-20", "typer": ["restavfall", "plast"] },
-        { "dato": "2026-08-27", "typer": ["matavfall", "papir"] },
-        { "dato": "2026-09-03", "typer": ["restavfall", "plast"] }
+        {
+          "dato": "2026-01-06",
+          "typer": [
+            "matavfall"
+          ]
+        },
+        {
+          "dato": "2026-01-13",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-01-16",
+          "typer": [
+            "glassmetall"
+          ]
+        },
+        {
+          "dato": "2026-01-20",
+          "typer": [
+            "papir"
+          ]
+        },
+        {
+          "dato": "2026-01-27",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-02-03",
+          "typer": [
+            "matavfall"
+          ]
+        },
+        {
+          "dato": "2026-02-10",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-02-17",
+          "typer": [
+            "papir"
+          ]
+        },
+        {
+          "dato": "2026-02-24",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-03-03",
+          "typer": [
+            "matavfall"
+          ]
+        },
+        {
+          "dato": "2026-03-10",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-03-13",
+          "typer": [
+            "glassmetall"
+          ]
+        },
+        {
+          "dato": "2026-03-17",
+          "typer": [
+            "papir"
+          ]
+        },
+        {
+          "dato": "2026-03-24",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-03-30",
+          "typer": [
+            "matavfall"
+          ]
+        },
+        {
+          "dato": "2026-04-08",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-04-14",
+          "typer": [
+            "papir"
+          ]
+        },
+        {
+          "dato": "2026-04-21",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-04-28",
+          "typer": [
+            "matavfall"
+          ]
+        },
+        {
+          "dato": "2026-05-05",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-05-12",
+          "typer": [
+            "papir"
+          ]
+        },
+        {
+          "dato": "2026-05-19",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-05-22",
+          "typer": [
+            "glassmetall"
+          ]
+        },
+        {
+          "dato": "2026-05-27",
+          "typer": [
+            "matavfall"
+          ]
+        },
+        {
+          "dato": "2026-06-02",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-06-09",
+          "typer": [
+            "papir"
+          ]
+        },
+        {
+          "dato": "2026-06-16",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-06-23",
+          "typer": [
+            "matavfall"
+          ]
+        },
+        {
+          "dato": "2026-06-30",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-07-07",
+          "typer": [
+            "papir"
+          ]
+        },
+        {
+          "dato": "2026-07-14",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-07-21",
+          "typer": [
+            "matavfall"
+          ]
+        },
+        {
+          "dato": "2026-07-28",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-08-04",
+          "typer": [
+            "papir"
+          ]
+        },
+        {
+          "dato": "2026-08-07",
+          "typer": [
+            "glassmetall"
+          ]
+        },
+        {
+          "dato": "2026-08-11",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-08-18",
+          "typer": [
+            "matavfall"
+          ]
+        },
+        {
+          "dato": "2026-08-25",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-09-01",
+          "typer": [
+            "papir"
+          ]
+        },
+        {
+          "dato": "2026-09-08",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-09-15",
+          "typer": [
+            "matavfall"
+          ]
+        },
+        {
+          "dato": "2026-09-22",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-09-29",
+          "typer": [
+            "papir"
+          ]
+        },
+        {
+          "dato": "2026-10-06",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-10-13",
+          "typer": [
+            "matavfall"
+          ]
+        },
+        {
+          "dato": "2026-10-20",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-10-27",
+          "typer": [
+            "papir"
+          ]
+        },
+        {
+          "dato": "2026-11-03",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-11-10",
+          "typer": [
+            "matavfall"
+          ]
+        },
+        {
+          "dato": "2026-11-13",
+          "typer": [
+            "glassmetall"
+          ]
+        },
+        {
+          "dato": "2026-11-17",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-11-24",
+          "typer": [
+            "papir"
+          ]
+        },
+        {
+          "dato": "2026-12-01",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-12-08",
+          "typer": [
+            "matavfall"
+          ]
+        },
+        {
+          "dato": "2026-12-15",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-12-21",
+          "typer": [
+            "papir"
+          ]
+        },
+        {
+          "dato": "2026-12-29",
+          "typer": [
+            "restavfall"
+          ]
+        }
       ]
     },
     {
       "id": "rute3",
       "navn": "Rute 3",
       "gater": [
-        "Solkjen", "Berlandsveien", "Fotlandsveien", "Kyrkjeveien", "Kyrkjebakken",
-        "Krambugata", "Edlandsgeilane", "Neseveien", "Timeveien", "Heiane"
+        "Solkjen",
+        "Berlandsveien",
+        "Fotlandsveien",
+        "Kyrkjeveien",
+        "Kyrkjebakken",
+        "Krambugata",
+        "Edlandsgeilane",
+        "Neseveien",
+        "Timeveien",
+        "Heiane",
+        "Ole Nielsens vei",
+        "Sveaveien",
+        "Rettedalen",
+        "Gjesdal",
+        "Helland",
+        "Madland",
+        "Ravndal"
       ],
+      "juletreUke": 3,
       "hentinger": [
-        { "dato": "2026-08-07", "typer": ["restavfall", "plast"] },
-        { "dato": "2026-08-14", "typer": ["matavfall"] },
-        { "dato": "2026-08-21", "typer": ["restavfall", "plast"] },
-        { "dato": "2026-08-28", "typer": ["matavfall", "papir"] },
-        { "dato": "2026-09-04", "typer": ["restavfall", "plast"] }
+        {
+          "dato": "2026-01-07",
+          "typer": [
+            "matavfall"
+          ]
+        },
+        {
+          "dato": "2026-01-14",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-01-21",
+          "typer": [
+            "papir"
+          ]
+        },
+        {
+          "dato": "2026-01-23",
+          "typer": [
+            "glassmetall"
+          ]
+        },
+        {
+          "dato": "2026-01-28",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-02-04",
+          "typer": [
+            "matavfall"
+          ]
+        },
+        {
+          "dato": "2026-02-11",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-02-18",
+          "typer": [
+            "papir"
+          ]
+        },
+        {
+          "dato": "2026-02-25",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-03-04",
+          "typer": [
+            "matavfall"
+          ]
+        },
+        {
+          "dato": "2026-03-11",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-03-18",
+          "typer": [
+            "papir"
+          ]
+        },
+        {
+          "dato": "2026-03-20",
+          "typer": [
+            "glassmetall"
+          ]
+        },
+        {
+          "dato": "2026-03-25",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-03-31",
+          "typer": [
+            "matavfall"
+          ]
+        },
+        {
+          "dato": "2026-04-09",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-04-15",
+          "typer": [
+            "papir"
+          ]
+        },
+        {
+          "dato": "2026-04-22",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-04-29",
+          "typer": [
+            "matavfall"
+          ]
+        },
+        {
+          "dato": "2026-05-06",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-05-13",
+          "typer": [
+            "papir"
+          ]
+        },
+        {
+          "dato": "2026-05-20",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-05-28",
+          "typer": [
+            "matavfall"
+          ]
+        },
+        {
+          "dato": "2026-06-03",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-06-05",
+          "typer": [
+            "glassmetall"
+          ]
+        },
+        {
+          "dato": "2026-06-10",
+          "typer": [
+            "papir"
+          ]
+        },
+        {
+          "dato": "2026-06-17",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-06-24",
+          "typer": [
+            "matavfall"
+          ]
+        },
+        {
+          "dato": "2026-07-01",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-07-08",
+          "typer": [
+            "papir"
+          ]
+        },
+        {
+          "dato": "2026-07-15",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-07-22",
+          "typer": [
+            "matavfall"
+          ]
+        },
+        {
+          "dato": "2026-07-29",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-08-05",
+          "typer": [
+            "papir"
+          ]
+        },
+        {
+          "dato": "2026-08-12",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-08-14",
+          "typer": [
+            "glassmetall"
+          ]
+        },
+        {
+          "dato": "2026-08-19",
+          "typer": [
+            "matavfall"
+          ]
+        },
+        {
+          "dato": "2026-08-26",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-09-02",
+          "typer": [
+            "papir"
+          ]
+        },
+        {
+          "dato": "2026-09-09",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-09-16",
+          "typer": [
+            "matavfall"
+          ]
+        },
+        {
+          "dato": "2026-09-23",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-09-30",
+          "typer": [
+            "papir"
+          ]
+        },
+        {
+          "dato": "2026-10-07",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-10-14",
+          "typer": [
+            "matavfall"
+          ]
+        },
+        {
+          "dato": "2026-10-21",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-10-28",
+          "typer": [
+            "papir"
+          ]
+        },
+        {
+          "dato": "2026-11-04",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-11-11",
+          "typer": [
+            "matavfall"
+          ]
+        },
+        {
+          "dato": "2026-11-18",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-11-20",
+          "typer": [
+            "glassmetall"
+          ]
+        },
+        {
+          "dato": "2026-11-25",
+          "typer": [
+            "papir"
+          ]
+        },
+        {
+          "dato": "2026-12-02",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-12-09",
+          "typer": [
+            "matavfall"
+          ]
+        },
+        {
+          "dato": "2026-12-16",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-12-22",
+          "typer": [
+            "papir"
+          ]
+        },
+        {
+          "dato": "2026-12-30",
+          "typer": [
+            "restavfall"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rute4",
+      "navn": "Rute 4",
+      "gater": [
+        "Lima",
+        "Berge",
+        "Lomeland",
+        "Oltedal",
+        "Dirdal",
+        "Frafjord",
+        "Maudal",
+        "Øvstebødalen"
+      ],
+      "juletreUke": 3,
+      "hentinger": [
+        {
+          "dato": "2026-01-02",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-01-08",
+          "typer": [
+            "matavfall"
+          ]
+        },
+        {
+          "dato": "2026-01-15",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-01-22",
+          "typer": [
+            "papir"
+          ]
+        },
+        {
+          "dato": "2026-01-29",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-01-30",
+          "typer": [
+            "glassmetall"
+          ]
+        },
+        {
+          "dato": "2026-02-05",
+          "typer": [
+            "matavfall"
+          ]
+        },
+        {
+          "dato": "2026-02-12",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-02-19",
+          "typer": [
+            "papir"
+          ]
+        },
+        {
+          "dato": "2026-02-26",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-03-05",
+          "typer": [
+            "matavfall"
+          ]
+        },
+        {
+          "dato": "2026-03-12",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-03-19",
+          "typer": [
+            "papir"
+          ]
+        },
+        {
+          "dato": "2026-03-26",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-04-01",
+          "typer": [
+            "matavfall"
+          ]
+        },
+        {
+          "dato": "2026-04-10",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-04-16",
+          "typer": [
+            "papir"
+          ]
+        },
+        {
+          "dato": "2026-04-17",
+          "typer": [
+            "glassmetall"
+          ]
+        },
+        {
+          "dato": "2026-04-23",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-04-30",
+          "typer": [
+            "matavfall"
+          ]
+        },
+        {
+          "dato": "2026-05-07",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-05-15",
+          "typer": [
+            "papir"
+          ]
+        },
+        {
+          "dato": "2026-05-21",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-05-29",
+          "typer": [
+            "matavfall"
+          ]
+        },
+        {
+          "dato": "2026-06-04",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-06-11",
+          "typer": [
+            "papir"
+          ]
+        },
+        {
+          "dato": "2026-06-12",
+          "typer": [
+            "glassmetall"
+          ]
+        },
+        {
+          "dato": "2026-06-18",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-06-25",
+          "typer": [
+            "matavfall"
+          ]
+        },
+        {
+          "dato": "2026-07-02",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-07-09",
+          "typer": [
+            "papir"
+          ]
+        },
+        {
+          "dato": "2026-07-16",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-07-23",
+          "typer": [
+            "matavfall"
+          ]
+        },
+        {
+          "dato": "2026-07-30",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-08-06",
+          "typer": [
+            "papir"
+          ]
+        },
+        {
+          "dato": "2026-08-13",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-08-20",
+          "typer": [
+            "matavfall"
+          ]
+        },
+        {
+          "dato": "2026-08-21",
+          "typer": [
+            "glassmetall"
+          ]
+        },
+        {
+          "dato": "2026-08-27",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-09-03",
+          "typer": [
+            "papir"
+          ]
+        },
+        {
+          "dato": "2026-09-10",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-09-17",
+          "typer": [
+            "matavfall"
+          ]
+        },
+        {
+          "dato": "2026-09-24",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-10-01",
+          "typer": [
+            "papir"
+          ]
+        },
+        {
+          "dato": "2026-10-08",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-10-15",
+          "typer": [
+            "matavfall"
+          ]
+        },
+        {
+          "dato": "2026-10-22",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-10-29",
+          "typer": [
+            "papir"
+          ]
+        },
+        {
+          "dato": "2026-11-05",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-11-12",
+          "typer": [
+            "matavfall"
+          ]
+        },
+        {
+          "dato": "2026-11-19",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-11-26",
+          "typer": [
+            "papir"
+          ]
+        },
+        {
+          "dato": "2026-11-27",
+          "typer": [
+            "glassmetall"
+          ]
+        },
+        {
+          "dato": "2026-12-03",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-12-10",
+          "typer": [
+            "matavfall"
+          ]
+        },
+        {
+          "dato": "2026-12-16",
+          "typer": [
+            "restavfall"
+          ]
+        },
+        {
+          "dato": "2026-12-23",
+          "typer": [
+            "papir"
+          ]
+        },
+        {
+          "dato": "2026-12-31",
+          "typer": [
+            "restavfall"
+          ]
+        }
       ]
     }
   ]

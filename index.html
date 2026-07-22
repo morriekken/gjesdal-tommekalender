@@ -13,10 +13,9 @@
   </header>
 
   <main class="container">
-    <div id="placeholder-banner" class="banner banner--warning" hidden>
-      Datoene under er eksempeldata, ikke offisielle hentedatoer. Se
-      <a id="kilde-link" href="#" target="_blank" rel="noopener">kommunens tømmekalender</a>
-      for oppdaterte datoer.
+    <div id="placeholder-banner" class="banner banner--info" hidden>
+      Viser hentedatoer for <span id="gjelder-aar"></span>. Kilde:
+      <a id="kilde-link" href="#" target="_blank" rel="noopener">kommunens tømmekalender</a>.
     </div>
 
     <section class="lookup-section" aria-labelledby="lookup-heading">
@@ -39,6 +38,7 @@
     <section class="result-section" id="result-section" hidden aria-labelledby="result-heading">
       <h2 id="result-heading"><span id="valgt-rute-navn"></span></h2>
       <p class="rute-gater" id="valgt-rute-gater"></p>
+      <p class="rute-juletre" id="valgt-rute-juletre"></p>
 
       <div class="next-pickup" id="next-pickup"></div>
 
