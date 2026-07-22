@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "kommune": "Gjesdal kommune",
+    "kilde": "https://www.gjesdal.kommune.no/tjenester/bolig-eiendom-kart-og-plan/renovasjon-avfall/tommekalender/",
+    "sistOppdatert": "2026-07-22",
+    "merknad": "PLACEHOLDER-DATA. Hentedatoene under er eksempeldata og MÅ erstattes med reelle datoer fra kommunens tømmekalender-PDF-er (én PDF per rute, publisert på kilde-URLen over) før appen brukes i praksis."
+  },
+  "avfallstyper": [
+    { "id": "restavfall", "navn": "Restavfall", "farge": "#4b4b4b", "beholder": "Grå dunk" },
+    { "id": "matavfall", "navn": "Matavfall", "farge": "#7a5230", "beholder": "Brun dunk / grønn pose" },
+    { "id": "papir", "navn": "Papir", "farge": "#2f6fb3", "beholder": "Blå dunk" },
+    { "id": "plast", "navn": "Plastemballasje", "farge": "#2f9e5c", "beholder": "Merket sekk, hentes sammen med restavfall" },
+    { "id": "bleie", "navn": "Bleiedunk", "farge": "#a0509a", "beholder": "Ekstra dunk (må bestilles)" }
+  ],
+  "ruter": [
+    {
+      "id": "rute1",
+      "navn": "Rute 1",
+      "gater": [
+        "Solåsveien", "Fiskebekkveien", "Åfaret",
+        "Ålgårdsheia", "Nordhagen",
+        "Ålgårdsveien", "Rishagen", "Kongsgata"
+      ],
+      "hentinger": [
+        { "dato": "2026-08-05", "typer": ["restavfall", "plast"] },
+        { "dato": "2026-08-12", "typer": ["matavfall"] },
+        { "dato": "2026-08-19", "typer": ["restavfall", "plast"] },
+        { "dato": "2026-08-26", "typer": ["matavfall", "papir"] },
+        { "dato": "2026-09-02", "typer": ["restavfall", "plast"] }
+      ]
+    },
+    {
+      "id": "rute2",
+      "navn": "Rute 2",
+      "gater": [
+        "Opstad", "Djupedalsveien", "Holmaveien",
+        "Vestliveien", "Sandvikveien", "Torvmyrveien", "Ånundskaret", "Rundaberget",
+        "Sikvalandsvegen"
+      ],
+      "hentinger": [
+        { "dato": "2026-08-06", "typer": ["restavfall", "plast"] },
+        { "dato": "2026-08-13", "typer": ["matavfall"] },
+        { "dato": "2026-08-20", "typer": ["restavfall", "plast"] },
+        { "dato": "2026-08-27", "typer": ["matavfall", "papir"] },
+        { "dato": "2026-09-03", "typer": ["restavfall", "plast"] }
+      ]
+    },
+    {
+      "id": "rute3",
+      "navn": "Rute 3",
+      "gater": [
+        "Solkjen", "Berlandsveien", "Fotlandsveien", "Kyrkjeveien", "Kyrkjebakken",
+        "Krambugata", "Edlandsgeilane", "Neseveien", "Timeveien", "Heiane"
+      ],
+      "hentinger": [
+        { "dato": "2026-08-07", "typer": ["restavfall", "plast"] },
+        { "dato": "2026-08-14", "typer": ["matavfall"] },
+        { "dato": "2026-08-21", "typer": ["restavfall", "plast"] },
+        { "dato": "2026-08-28", "typer": ["matavfall", "papir"] },
+        { "dato": "2026-09-04", "typer": ["restavfall", "plast"] }
+      ]
+    }
+  ]
+}

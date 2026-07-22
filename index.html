@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="no">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tømmekalender – Gjesdal kommune</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>Tømmekalender</h1>
+    <p class="subtitle">Gjesdal kommune – oversikt over tømmeruter og hentedager</p>
+  </header>
+
+  <main class="container">
+    <div id="placeholder-banner" class="banner banner--warning" hidden>
+      Datoene under er eksempeldata, ikke offisielle hentedatoer. Se
+      <a id="kilde-link" href="#" target="_blank" rel="noopener">kommunens tømmekalender</a>
+      for oppdaterte datoer.
+    </div>
+
+    <section class="lookup-section" aria-labelledby="lookup-heading">
+      <h2 id="lookup-heading">Finn din rute</h2>
+      <label for="gate-input">Søk på gatenavn</label>
+      <input
+        type="text"
+        id="gate-input"
+        placeholder="F.eks. Solåsveien"
+        autocomplete="off"
+      />
+      <div id="gate-suggestions" class="suggestions" hidden></div>
+
+      <label for="rute-select">…eller velg rute direkte</label>
+      <select id="rute-select">
+        <option value="">Velg rute</option>
+      </select>
+    </section>
+
+    <section class="result-section" id="result-section" hidden aria-labelledby="result-heading">
+      <h2 id="result-heading"><span id="valgt-rute-navn"></span></h2>
+      <p class="rute-gater" id="valgt-rute-gater"></p>
+
+      <div class="next-pickup" id="next-pickup"></div>
+
+      <h3>Kommende hentinger</h3>
+      <ul class="pickup-list" id="pickup-list"></ul>
+    </section>
+
+    <section class="legend-section" aria-labelledby="legend-heading">
+      <h2 id="legend-heading">Avfallstyper</h2>
+      <ul class="legend-list" id="legend-list"></ul>
+    </section>
+
+    <section class="info-section" aria-labelledby="info-heading">
+      <h2 id="info-heading">Varsling</h2>
+      <p>
+        SMS-varsling om tømmedag er avviklet. Kommunen anbefaler appen
+        <strong>Gjesdaltråden</strong> (innbyggerappen til Gjesdal kommune) for
+        påminnelser om henting, i tillegg til nyheter og annen kommunal info.
+      </p>
+      <p>
+        Trenger du papirkalender, ekstrasekk eller har andre spørsmål om
+        renovasjon? Kontakt Gjesdal kommune på
+        <a href="tel:51614200">51 61 42 00</a> eller
+        <a href="mailto:post@gjesdal.kommune.no">post@gjesdal.kommune.no</a>.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      Kilde: <a href="https://www.gjesdal.kommune.no/tjenester/bolig-eiendom-kart-og-plan/renovasjon-avfall/tommekalender/" target="_blank" rel="noopener">gjesdal.kommune.no</a>
+      – denne siden er ikke offisiell og driftes uavhengig av kommunen.
+    </p>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
