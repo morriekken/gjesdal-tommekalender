@@ -6,6 +6,8 @@
     selectedRuteId: null,
   };
 
+  const STORAGE_KEY = "gjesdal-tommekalender:selectedRuteId";
+
   const els = {
     gateInput: document.getElementById("gate-input"),
     gateSuggestions: document.getElementById("gate-suggestions"),
@@ -37,6 +39,20 @@
     renderLegend();
     populateRuteSelect();
     bindEvents();
+    restoreSelection();
+  }
+
+  function restoreSelection() {
+    const urlRuteId = new URLSearchParams(window.location.search).get("rute");
+    if (urlRuteId && state.data.ruter.some((r) => r.id === urlRuteId)) {
+      selectRute(urlRuteId);
+      return;
+    }
+
+    const storedRuteId = localStorage.getItem(STORAGE_KEY);
+    if (storedRuteId && state.data.ruter.some((r) => r.id === storedRuteId)) {
+      selectRute(storedRuteId);
+    }
   }
 
   function renderMeta() {
@@ -144,6 +160,11 @@
 
     els.resultSection.hidden = false;
     els.resultSection.scrollIntoView({ behavior: "smooth", block: "nearest" });
+
+    localStorage.setItem(STORAGE_KEY, ruteId);
+    const url = new URL(window.location.href);
+    url.searchParams.set("rute", ruteId);
+    history.replaceState(null, "", url);
   }
 
   function getUpcomingHentinger(rute) {
