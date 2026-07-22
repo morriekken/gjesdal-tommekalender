@@ -102,6 +102,12 @@ select {
   font-size: 0.9rem;
 }
 
+.rute-juletre {
+  color: var(--color-muted);
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
 .next-pickup {
   background: var(--color-bg);
   border-radius: var(--radius);
@@ -195,10 +201,10 @@ select {
   font-size: 0.9rem;
 }
 
-.banner--warning {
-  background: #fdf3d8;
-  border: 1px solid #e3c766;
-  color: #6b5a12;
+.banner--info {
+  background: #e7f0f9;
+  border: 1px solid #b9d3ec;
+  color: #2c5175;
 }
 
 .site-footer {

@@ -18,6 +18,8 @@
     legendList: document.getElementById("legend-list"),
     placeholderBanner: document.getElementById("placeholder-banner"),
     kildeLink: document.getElementById("kilde-link"),
+    gjelderAar: document.getElementById("gjelder-aar"),
+    valgtRuteJuletre: document.getElementById("valgt-rute-juletre"),
   };
 
   fetch("data/tommekalender.json")
@@ -39,7 +41,8 @@
 
   function renderMeta() {
     const { meta } = state.data;
-    if (meta && meta.merknad) {
+    if (meta && meta.gjelderAar) {
+      els.gjelderAar.textContent = meta.gjelderAar;
       els.placeholderBanner.hidden = false;
     }
     if (meta && meta.kilde) {
@@ -132,6 +135,9 @@
 
     els.valgtRuteNavn.textContent = rute.navn;
     els.valgtRuteGater.textContent = rute.gater.join(", ");
+    els.valgtRuteJuletre.textContent = rute.juletreUke
+      ? `Juletre hentes i uke ${rute.juletreUke}.`
+      : "";
 
     renderNextPickup(rute);
     renderPickupList(rute);
