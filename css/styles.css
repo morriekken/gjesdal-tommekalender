@@ -203,12 +203,16 @@ select {
 }
 
 .pickup-list li {
-  padding: 0.6rem 0;
-  border-bottom: 1px solid var(--color-border);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-left: 3px solid rgba(47, 111, 179, 0.4);
+  border-radius: 6px;
+  padding: 0.6rem 0.75rem;
+  margin-bottom: 0.6rem;
 }
 
 .pickup-list li:last-child {
-  border-bottom: none;
+  margin-bottom: 0;
 }
 
 .pickup-week {
@@ -229,6 +233,8 @@ select {
 
 .pickup-list .pickup-row + .pickup-row {
   margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--color-border);
 }
 
 .pickup-list .pickup-row .badge-row {
