@@ -109,19 +109,67 @@ select {
 }
 
 .next-pickup {
-  background: var(--color-bg);
+  background: var(--color-surface);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  border-left: 5px solid var(--color-accent);
   border-radius: var(--radius);
-  padding: 1rem;
+  padding: 1.25rem;
   margin: 1rem 0;
+  box-shadow: 0 6px 18px rgba(43, 43, 40, 0.1);
 }
 
-.next-pickup .date {
-  font-size: 1.25rem;
+.next-pickup .week {
+  font-size: 0.8rem;
   font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--color-accent);
+  margin-bottom: 0.15rem;
 }
 
-.next-pickup .days-until {
+.next-pickup .pickup-row + .pickup-row {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.next-pickup .pickup-date {
+  font-size: 1.35rem;
+  font-weight: 800;
+}
+
+.next-pickup .pickup-when {
   color: var(--color-muted);
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-top: 0.1rem;
+}
+
+.pickup-details {
+  margin-top: 0.5rem;
+}
+
+.pickup-details summary {
+  cursor: pointer;
+  font-weight: 600;
+  padding: 0.4rem 0;
+  list-style: none;
+}
+
+.pickup-details summary::-webkit-details-marker {
+  display: none;
+}
+
+.pickup-details summary::before {
+  content: "▸";
+  display: inline-block;
+  margin-right: 0.4rem;
+  transition: transform 0.15s ease;
+}
+
+.pickup-details[open] summary::before {
+  transform: rotate(90deg);
 }
 
 .badge-row {
@@ -155,20 +203,41 @@ select {
 }
 
 .pickup-list li {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 0.6rem 0;
-  border-bottom: 1px solid var(--color-border);
-  gap: 0.4rem;
-}
-
-.pickup-list li .badge-row {
-  margin-top: 0;
+  border: 1px solid var(--color-border);
+  border-left: 3px solid rgba(47, 111, 179, 0.4);
+  border-radius: 6px;
+  padding: 0.6rem 0.75rem;
+  margin-bottom: 0.6rem;
 }
 
 .pickup-list li:last-child {
-  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.pickup-week {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--color-muted);
+  margin-bottom: 0.4rem;
+}
+
+.pickup-list .pickup-row {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.4rem;
+}
+
+.pickup-list .pickup-row + .pickup-row {
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.pickup-list .pickup-row .badge-row {
+  margin-top: 0;
 }
 
 .legend-list {
