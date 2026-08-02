@@ -175,6 +175,40 @@
       .sort((a, b) => a.dateObj - b.dateObj);
   }
 
+  function groupByIsoWeek(hentinger) {
+    const groups = [];
+    const groupByKey = new Map();
+
+    hentinger.forEach((h) => {
+      const { year, week } = getIsoWeekInfo(h.dateObj);
+      const key = `${year}-${week}`;
+      let group = groupByKey.get(key);
+      if (!group) {
+        group = { week, items: [] };
+        groupByKey.set(key, group);
+        groups.push(group);
+      }
+      group.items.push(h);
+    });
+
+    return groups;
+  }
+
+  function daysUntilLabel(dateObj) {
+    const daysUntil = diffInDays(startOfDay(new Date()), dateObj);
+    return daysUntil === 0 ? "I dag" : daysUntil === 1 ? "I morgen" : `Om ${daysUntil} dager`;
+  }
+
+  function pickupRowHtml(h) {
+    return `
+      <div class="pickup-row">
+        <div class="pickup-date">${formatDateLong(h.dateObj)}</div>
+        <div class="pickup-when">${daysUntilLabel(h.dateObj)}</div>
+        <div class="badge-row">${badgesHtml(h.typer)}</div>
+      </div>
+    `;
+  }
+
   function renderNextPickup(rute) {
     const upcoming = getUpcomingHentinger(rute);
     if (upcoming.length === 0) {
@@ -182,36 +216,40 @@
       return;
     }
 
-    const next = upcoming[0];
-    const daysUntil = diffInDays(startOfDay(new Date()), next.dateObj);
-    const daysLabel =
-      daysUntil === 0 ? "I dag" : daysUntil === 1 ? "I morgen" : `Om ${daysUntil} dager`;
+    const nextWeekGroup = groupByIsoWeek(upcoming)[0];
 
     els.nextPickup.innerHTML = `
-      <div class="week">Uke ${getIsoWeekNumber(next.dateObj)}</div>
-      <div class="date">${formatDateLong(next.dateObj)}</div>
-      <div class="days-until">${daysLabel}</div>
-      <div class="badge-row">${badgesHtml(next.typer)}</div>
+      <div class="week">Uke ${nextWeekGroup.week}</div>
+      ${nextWeekGroup.items.map(pickupRowHtml).join("")}
     `;
   }
 
   function renderPickupList(rute) {
-    // Den neste hentingen vises allerede i "next-pickup"-boksen over listen.
-    const upcoming = getUpcomingHentinger(rute).slice(1);
+    // Uken med den neste hentingen vises allerede i "next-pickup"-boksen over listen.
+    const remainingGroups = groupByIsoWeek(getUpcomingHentinger(rute)).slice(1);
     els.pickupList.innerHTML = "";
 
-    if (upcoming.length === 0) {
+    if (remainingGroups.length === 0) {
       const li = document.createElement("li");
       li.textContent = "Ingen flere kommende hentinger i datasettet.";
       els.pickupList.appendChild(li);
       return;
     }
 
-    upcoming.forEach((h) => {
+    remainingGroups.forEach((group) => {
       const li = document.createElement("li");
       li.innerHTML = `
-        <span>${formatDate(h.dateObj)}</span>
-        <span class="badge-row">${badgesHtml(h.typer)}</span>
+        <div class="pickup-week">Uke ${group.week}</div>
+        ${group.items
+          .map(
+            (h) => `
+              <div class="pickup-row">
+                <span>${formatDateLong(h.dateObj)}</span>
+                <span class="badge-row">${badgesHtml(h.typer)}</span>
+              </div>
+            `
+          )
+          .join("")}
       `;
       els.pickupList.appendChild(li);
     });
@@ -250,20 +288,19 @@
     });
   }
 
-  function formatDate(date) {
-    return `${formatDateLong(date)} (uke ${getIsoWeekNumber(date)})`;
-  }
-
   // ISO 8601-ukenummer, som er den norske standarden (uke 1 er uken med årets første torsdag).
-  function getIsoWeekNumber(date) {
+  // Returnerer også ISO-ukeåret, som kan avvike fra kalenderåret rundt nyttår.
+  function getIsoWeekInfo(date) {
     const target = new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()));
     const dayNum = (target.getUTCDay() + 6) % 7; // mandag = 0 ... søndag = 6
     target.setUTCDate(target.getUTCDate() - dayNum + 3);
 
-    const firstThursday = new Date(Date.UTC(target.getUTCFullYear(), 0, 4));
+    const isoYear = target.getUTCFullYear();
+    const firstThursday = new Date(Date.UTC(isoYear, 0, 4));
     const firstDayNum = (firstThursday.getUTCDay() + 6) % 7;
     firstThursday.setUTCDate(firstThursday.getUTCDate() - firstDayNum + 3);
 
-    return 1 + Math.round((target - firstThursday) / (7 * 24 * 60 * 60 * 1000));
+    const week = 1 + Math.round((target - firstThursday) / (7 * 24 * 60 * 60 * 1000));
+    return { year: isoYear, week };
   }
 })();
