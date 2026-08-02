@@ -188,7 +188,8 @@
       daysUntil === 0 ? "I dag" : daysUntil === 1 ? "I morgen" : `Om ${daysUntil} dager`;
 
     els.nextPickup.innerHTML = `
-      <div class="date">${formatDate(next.dateObj)}</div>
+      <div class="week">Uke ${getIsoWeekNumber(next.dateObj)}</div>
+      <div class="date">${formatDateLong(next.dateObj)}</div>
       <div class="days-until">${daysLabel}</div>
       <div class="badge-row">${badgesHtml(next.typer)}</div>
     `;
@@ -240,14 +241,17 @@
     return Math.round((b - a) / msPerDay);
   }
 
-  function formatDate(date) {
-    const dateStr = date.toLocaleDateString("no-NO", {
+  function formatDateLong(date) {
+    return date.toLocaleDateString("no-NO", {
       weekday: "long",
       day: "numeric",
       month: "long",
       year: "numeric",
     });
-    return `${dateStr} (uke ${getIsoWeekNumber(date)})`;
+  }
+
+  function formatDate(date) {
+    return `${formatDateLong(date)} (uke ${getIsoWeekNumber(date)})`;
   }
 
   // ISO 8601-ukenummer, som er den norske standarden (uke 1 er uken med årets første torsdag).

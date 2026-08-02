@@ -116,6 +116,15 @@ select {
   margin: 1rem 0;
 }
 
+.next-pickup .week {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  opacity: 0.8;
+  margin-bottom: 0.15rem;
+}
+
 .next-pickup .date {
   font-size: 1.75rem;
   font-weight: 800;
