@@ -109,19 +109,48 @@ select {
 }
 
 .next-pickup {
-  background: var(--color-bg);
+  background: var(--color-accent);
+  color: #fff;
   border-radius: var(--radius);
-  padding: 1rem;
+  padding: 1.25rem;
   margin: 1rem 0;
 }
 
 .next-pickup .date {
-  font-size: 1.25rem;
-  font-weight: 700;
+  font-size: 1.75rem;
+  font-weight: 800;
 }
 
 .next-pickup .days-until {
-  color: var(--color-muted);
+  color: #fff;
+  opacity: 0.9;
+  font-weight: 600;
+}
+
+.pickup-details {
+  margin-top: 0.5rem;
+}
+
+.pickup-details summary {
+  cursor: pointer;
+  font-weight: 600;
+  padding: 0.4rem 0;
+  list-style: none;
+}
+
+.pickup-details summary::-webkit-details-marker {
+  display: none;
+}
+
+.pickup-details summary::before {
+  content: "▸";
+  display: inline-block;
+  margin-right: 0.4rem;
+  transition: transform 0.15s ease;
+}
+
+.pickup-details[open] summary::before {
+  transform: rotate(90deg);
 }
 
 .badge-row {
