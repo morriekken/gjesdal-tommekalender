@@ -159,7 +159,7 @@
     renderPickupList(rute);
 
     els.resultSection.hidden = false;
-    els.resultSection.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    els.resultSection.scrollIntoView({ behavior: "smooth", block: "start" });
 
     localStorage.setItem(STORAGE_KEY, ruteId);
     const url = new URL(window.location.href);
