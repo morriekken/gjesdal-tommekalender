@@ -109,26 +109,29 @@ select {
 }
 
 .next-pickup {
-  background: var(--color-accent);
-  color: #fff;
+  background: var(--color-surface);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  border-left: 5px solid var(--color-accent);
   border-radius: var(--radius);
   padding: 1.25rem;
   margin: 1rem 0;
+  box-shadow: 0 6px 18px rgba(43, 43, 40, 0.1);
 }
 
 .next-pickup .week {
   font-size: 0.8rem;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.03em;
-  opacity: 0.8;
+  color: var(--color-accent);
   margin-bottom: 0.15rem;
 }
 
 .next-pickup .pickup-row + .pickup-row {
   margin-top: 0.75rem;
   padding-top: 0.75rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  border-top: 1px solid var(--color-border);
 }
 
 .next-pickup .pickup-date {
@@ -137,8 +140,7 @@ select {
 }
 
 .next-pickup .pickup-when {
-  color: #fff;
-  opacity: 0.9;
+  color: var(--color-muted);
   font-weight: 600;
   font-size: 0.9rem;
   margin-top: 0.1rem;
