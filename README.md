@@ -1,7 +1,10 @@
-# gjesdal-tommekalender
+# Tommekalender for Gjesdal kommune
 Her finner du oversikt over de ulike tømmerutene, og hvordan du kan motta varsling om tømmedag i Gjesdal kommune.
 
-En enkel, avhengighetsfri HTML/CSS/JS-app for å slå opp tømmerute og hentedager.
+En enkel, HTML/CSS/JS-app for å slå opp tømmerute og hentedager.
+
+OBS! Er det ikke det du ønsker? Du kan finne en annen app som tilbyr kalender påminelser for Outlook eller annen kalender-app: https://segarjj.github.io/gjesdal-calendars/
+
 
 ## Webside
 
