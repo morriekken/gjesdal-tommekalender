@@ -3,15 +3,9 @@ Her finner du oversikt over de ulike tømmerutene, og hvordan du kan motta varsl
 
 En enkel, avhengighetsfri HTML/CSS/JS-app for å slå opp tømmerute og hentedager.
 
-## Kjøre lokalt
+## Webside
 
-Ingen byggesteg nødvendig. Server rotmappen med en enkel HTTP-server, f.eks.:
-
-```
-python3 -m http.server 8000
-```
-
-Åpne deretter <http://localhost:8000> i nettleseren.
+Appen er tilgjengelig under https://gjesdal-tommekalender.netlify.app/
 
 ## Struktur
 
