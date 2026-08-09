@@ -9,25 +9,25 @@
     {
       "id": "restavfall",
       "navn": "Restavfall",
-      "farge": "#4b4b4b",
+      "farge": "#1a1a1a",
       "beholder": "Grå dunk (og bleiedunk, tømmes samme dag)"
     },
     {
       "id": "matavfall",
       "navn": "Matavfall",
-      "farge": "#2f9e5c",
+      "farge": "#6b4226",
       "beholder": "Dunk for matavfall"
     },
     {
       "id": "glassmetall",
       "navn": "Glass/metallemballasje",
-      "farge": "#3f8f8f",
+      "farge": "#2f6fb3",
       "beholder": "Egen dunk/boks"
     },
     {
       "id": "papir",
       "navn": "Papir",
-      "farge": "#2f6fb3",
+      "farge": "#2f9e5c",
       "beholder": "Blå dunk"
     }
   ],
